@@ -6,6 +6,7 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 
 import { MetaSEO } from '~/types';
 import { SITE } from '~/config.mjs';
+import '@fontsource/twinkle-star';
 
 export interface Props {
   meta?: MetaSEO;
@@ -25,6 +26,10 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
     <slot />
     <BasicScripts />
     <style is:global>
+      * {
+        font-family: 'Twinkle Star';
+      }
+
       img {
         content-visibility: auto;
       }
